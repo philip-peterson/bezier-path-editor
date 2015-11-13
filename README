@@ -1,0 +1,49 @@
+Instructions
+============
+
+Adding points
+-------------
+
+Move your cursor to the desired location, and click the left mouse
+button to add a control point. The position of this point can be previewed
+by the floating red or blue dot that follows the cursor (not shown when control 
+point display is off).
+
+When enough points have been entered, the entire curve input so far will be displayed.
+
+After the first point, every third point must be collinear with the previous point.  
+Also, if you create a black hole by placing many points at the same location, the next
+point's position may be similarly constrained.
+
+When the point's position is constrained (and control point display is on) the preview
+point will be displayed in blue instead of the normal red.
+
+Turning on/off the control point display
+----------------------------------------
+
+Use the period (.) key to toggle the display of control points.
+
+Rendering Modes
+---------------
+
+To switch between modes, use the number keys 1, 2, 3, and 4.
+
+1 Key - Use parametric scheme (default)
+2 Key - Use De Casteljau scheme
+3 Key - Use OpenGL scheme
+4 Key - Use subdivision scheme
+
+Each mode is colored a different color.
+
+Step size / level
+-----------------
+To increase or decrease the number of steps (for modes 1-3) or
+the level of subdivision (for mode 4), use the plus and minus keys
+(+ and -). You can also use the equals (=) key instead of the plus.
+
+You can view the current step size / level in the terminal output.
+
+NOTE that if you set the level to a large number in modes 1-3 (e.g.
+value 30+) and switch to mode 4, the program will become EXTREMELY
+slow and possibly freeze or crash. This is because mode 4 is very
+slow for large numbers of iterations.
